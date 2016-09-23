@@ -1,0 +1,35 @@
+{
+  "name": "silph",
+  "version": "0.0.0",
+  "description": "Look through shallow objects.",
+  "main": "silph.js",
+  "authors": [
+    "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "look",
+    "through",
+    "shallow",
+    "objects",
+    "loosen",
+    "fluctuate",
+    "silph"
+  ],
+  "homepage": "https://github.com/volkovasystems/silph",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "loosen": "^0.0.0",
+    "optall": "^0.0.0",
+    "budge": "^0.0.1",
+    "plough": "^0.0.3",
+    "raze": "^0.0.8",
+    "u200b": "^0.2.1"
+  }
+}
