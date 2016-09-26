@@ -51,7 +51,6 @@
 			"loosen": "loosen",
 			"plough": "plough",
 			"optall": "optall",
-			"raze": "raze",
 			"U200b": "u200b"
 		}
 	@end-include
@@ -62,7 +61,6 @@ if( typeof window == "undefined" ){
 	var loosen = require( "loosen" );
 	var plough = require( "plough" );
 	var optall = require( "optall" );
-	var raze = require( "raze" );
 	var U200b = require( "u200b" );
 }
 
@@ -91,12 +89,6 @@ if( typeof window != "undefined" &&
 }
 
 if( typeof window != "undefined" &&
-	!( "raze" in window ) )
-{
-	throw new Error( "raze is not defined" );
-}
-
-if( typeof window != "undefined" &&
 	!( "U200b" in window ) )
 {
 	throw new Error( "U200b is not defined" );
@@ -110,14 +102,17 @@ var silph = function silph( entity, path ){
 					"object",
 					Array
 				],
-				"path:required": "string"
+				"path:required": [
+					"string",
+					"..."
+				]
 			}
 		@end-meta-configuration
 	*/
 
 	var data = loosen( entity );
 
-	path = optall( plough( budge( raze( arguments ) )
+	path = optall( plough( budge( arguments )
 		.map( function onEachToken( token ){
 			return token.split( "." );
 		} ) ), STRING );

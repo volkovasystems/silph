@@ -1,6 +1,6 @@
 {
   "name": "silph",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Look through shallow objects.",
   "main": "silph.js",
   "scripts": {
@@ -27,10 +27,9 @@
   "homepage": "https://github.com/volkovasystems/silph#readme",
   "dependencies": {
     "budge": "0.0.1",
-    "loosen": "0.0.2",
+    "loosen": "0.0.3",
     "optall": "0.0.0",
-    "plough": "0.0.3",
-    "raze": "0.0.8",
-    "u200b": "^0.2.2"
+    "plough": "0.0.4",
+    "u200b": "^0.2.3"
   }
 }
