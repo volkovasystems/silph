@@ -43,6 +43,8 @@
 
 	@module-documentation:
 		Look through shallow objects.
+
+		Do not mix in one token, paths containing dot reference and variable arguments.
 	@end-module-documentation
 
 	@include:
@@ -114,6 +116,10 @@ var silph = function silph( entity, path ){
 
 	path = optall( plough( budge( arguments )
 		.map( function onEachToken( token ){
+			if( ( /\.{3}/ ).test( token ) ){
+				return U200b( token.split( /\.{3}/g ) ).join( "..." ).toString( );
+			}
+
 			return token.split( "." );
 		} ) ), STRING );
 
