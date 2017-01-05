@@ -5,7 +5,7 @@
 		The MIT License (MIT)
 		@mit-license
 
-		Copyright (@c) 2016 Richeve Siodina Bebedor
+		Copyright (@c) 2017 Richeve Siodina Bebedor
 		@email: richeve.bebedor@gmail.com
 
 		Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,6 +34,9 @@
 			"file": "silph.js",
 			"module": "silph",
 			"author": "Richeve S. Bebedor",
+			"contributors": [
+				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+			],
 			"eMail": "richeve.bebedor@gmail.com",
 			"repository": "https://github.com/volkovasystems/silph.git",``
 			"test": "silph-test.js",
@@ -58,45 +61,13 @@
 	@end-include
 */
 
-if( typeof window == "undefined" ){
-	var budge = require( "budge" );
-	var loosen = require( "loosen" );
-	var plough = require( "plough" );
-	var optall = require( "optall" );
-	var U200b = require( "u200b" );
-}
+const budge = require( "budge" );
+const loosen = require( "loosen" );
+const optall = require( "optall" );
+const plough = require( "plough" );
+const U200b = require( "u200b" );
 
-if( typeof window != "undefined" &&
-	!( "budge" in window ) )
-{
-	throw new Error( "budge is not defined" );
-}
-
-if( typeof window != "undefined" &&
-	!( "loosen" in window ) )
-{
-	throw new Error( "loosen is not defined" );
-}
-
-if( typeof window != "undefined" &&
-	!( "plough" in window ) )
-{
-	throw new Error( "plough is not defined" );
-}
-
-if( typeof window != "undefined" &&
-	!( "optall" in window ) )
-{
-	throw new Error( "optall is not defined" );
-}
-
-if( typeof window != "undefined" &&
-	!( "U200b" in window ) )
-{
-	throw new Error( "U200b is not defined" );
-}
-
-var silph = function silph( entity, path ){
+const silph = function silph( entity, path ){
 	/*;
 		@meta-configuration:
 			{
@@ -112,7 +83,7 @@ var silph = function silph( entity, path ){
 		@end-meta-configuration
 	*/
 
-	var data = loosen( entity );
+	let data = loosen( entity );
 
 	path = optall( plough( budge( arguments )
 		.map( function onEachToken( token ){
@@ -132,6 +103,4 @@ var silph = function silph( entity, path ){
 	return data[ path ];
 };
 
-if( typeof module != "undefined" ){
-	module.exports = silph;
-}
+module.exports = silph;
