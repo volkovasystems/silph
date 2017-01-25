@@ -54,8 +54,9 @@
 		{
 			"budge": "budge",
 			"loosen": "loosen",
-			"plough": "plough",
 			"optall": "optall",
+			"plough": "plough",
+			"protype": "protype",
 			"U200b": "u200b"
 		}
 	@end-include
@@ -65,6 +66,8 @@ const budge = require( "budge" );
 const loosen = require( "loosen" );
 const optall = require( "optall" );
 const plough = require( "plough" );
+const protype = require( "protype" );
+const truly = require( "truly" );
 const U200b = require( "u200b" );
 
 const silph = function silph( entity, path ){
@@ -83,9 +86,15 @@ const silph = function silph( entity, path ){
 		@end-meta-configuration
 	*/
 
+	if( !protype( entity, OBJECT ) ){
+		throw new Error( "invalid entity" );
+	}
+
 	let data = loosen( entity );
 
 	path = optall( plough( budge( arguments )
+		.filter( truly )
+		.filter( ( token ) => { return protype( token, STRING ); } )
 		.map( function onEachToken( token ){
 			if( ( /\.{3}/ ).test( token ) ){
 				return U200b( token.split( /\.{3}/g ) ).join( "..." ).toString( );
