@@ -24,4 +24,5 @@ plough \
 protype \
 truly \
 u200b \
---save
+--save \
+--force-latest
