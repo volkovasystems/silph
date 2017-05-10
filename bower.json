@@ -1,6 +1,6 @@
 {
   "name": "silph",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "description": "Look through shallow objects.",
   "main": "silph.deploy.js",
   "support": "silph.support.js",
@@ -27,12 +27,12 @@
     "tests"
   ],
   "dependencies": {
-    "budge": "^0.25.0",
-    "loosen": "^0.18.0",
-    "optall": "^0.20.0",
-    "plough": "^0.24.0",
+    "budge": "^0.28.0",
+    "loosen": "^0.20.0",
+    "optall": "^0.22.0",
+    "plough": "^0.25.0",
     "protype": "^0.21.0",
     "truly": "^0.18.0",
-    "u200b": "^0.25.0"
+    "u200b": "^0.27.0"
   }
 }
