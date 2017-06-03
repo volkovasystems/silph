@@ -1,19 +1,19 @@
 const assert = require( "assert" );
 const silph = require( "./silph.js" );
 
-var item_object = {
+let item_object = {
 	"item": {
 		"name": "burger-item",
 		"title": "Burger Item"
 	}
 };
 
-var item_array = [
+let item_array = [
 	"ballpen-item",
 	"Ballpen Item"
 ];
 
-var merchant_array = [
+let merchant_array = [
 	"biyaheroes-team",
 	"pure-gold",
 	{
