@@ -52,21 +52,21 @@
 
 	@include:
 		{
-			"budge": "budge",
 			"loosen": "loosen",
 			"optall": "optall",
 			"plough": "plough",
 			"protype": "protype",
+			"shft": "shft",
 			"U200b": "u200b"
 		}
 	@end-include
 */
 
-const budge = require( "budge" );
 const loosen = require( "loosen" );
 const optall = require( "optall" );
 const plough = require( "plough" );
 const protype = require( "protype" );
+const shft = require( "shft" );
 const truly = require( "truly" );
 const U200b = require( "u200b" );
 
@@ -92,7 +92,7 @@ const silph = function silph( entity, path ){
 
 	let data = loosen( entity );
 
-	path = optall( plough( budge( arguments )
+	path = optall( plough( shft( arguments )
 		.filter( truly )
 		.filter( ( token ) => { return protype( token, STRING ); } )
 		.map( function onEachToken( token ){
