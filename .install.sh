@@ -1,10 +1,10 @@
 yarn add \
 babel-runtime \
-budge \
 loosen \
 optall \
 plough \
 protype \
+shft \
 truly \
 u200b \
 --save && \
@@ -17,11 +17,11 @@ source-map-loader \
 webpack \
 --dev && \
 bower install \
-budge \
 loosen \
 optall \
 plough \
 protype \
+shft \
 truly \
 u200b \
 --save \
