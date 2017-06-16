@@ -24,15 +24,13 @@ let merchant_array = [
 	}
 ];
 
-assert.equal( silph( item_object, "item.title" ), "Burger Item" );
-assert.equal( silph( item_object, "item.name" ), "burger-item" );
-assert.deepEqual( silph( item_object, "item" ), { "name": "burger-item", "title": "Burger Item" } );
-assert.equal( silph( item_array, "0" ), "ballpen-item" );
-assert.equal( silph( item_array, "1" ), "Ballpen Item" );
-assert.equal( silph( merchant_array, "0" ), "biyaheroes-team" );
-assert.equal( silph( merchant_array, "1" ), "pure-gold" );
-assert.deepEqual( silph( merchant_array, "2" ), { "logo": { "reference": "ref1", "path": "path1" } } );
-assert.deepEqual( silph( merchant_array, "2.logo" ), { "reference": "ref1", "path": "path1" } );
-assert.equal( silph( merchant_array, "2.logo.reference" ), "ref1" );
+assert.equal( silph( item_object, "item.title" ), "Burger Item", "should return 'Burger Item'" );
+
+assert.equal( silph( item_array, "0" ), "ballpen-item", "should return 'ballpen-item'" );
+
+assert.deepEqual( silph( merchant_array, "2.logo" ), { "reference": "ref1", "path": "path1" }, "should be deeply equal" );
+
+assert.equal( silph( merchant_array, "2.logo.reference" ), "ref1", "should return 'ref1'" );
+
 
 console.log( "ok" );
