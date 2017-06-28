@@ -34,11 +34,11 @@
               			"file": "silph.js",
               			"module": "silph",
               			"author": "Richeve S. Bebedor",
+              			"eMail": "richeve.bebedor@gmail.com",
               			"contributors": [
               				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
               				"Vinse Vinalon <vinsevinalon@gmail.com>"
               			],
-              			"eMail": "richeve.bebedor@gmail.com",
               			"repository": "https://github.com/volkovasystems/silph.git",``
               			"test": "silph-test.js",
               			"global": true
