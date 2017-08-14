@@ -24,13 +24,13 @@ let merchant_array = [
 	}
 ];
 
-assert.equal( silph( item_object, "item.title" ), "Burger Item", "should return 'Burger Item'" );
+assert.equal( silph( item_object, "item.title" ), "Burger Item", "should be equal to 'Burger Item'" );
 
-assert.equal( silph( item_array, "0" ), "ballpen-item", "should return 'ballpen-item'" );
+assert.equal( silph( item_array, "0" ), "ballpen-item", "should be equal to 'ballpen-item'" );
 
-assert.deepEqual( silph( merchant_array, "2.logo" ), { "reference": "ref1", "path": "path1" }, "should be deeply equal" );
+assert.deepEqual( silph( merchant_array, "2.logo" ), { "reference": "ref1", "path": "path1" },
+	"should be equal to { 'reference': 'ref1', 'path': 'path1' }" );
 
-assert.equal( silph( merchant_array, "2.logo.reference" ), "ref1", "should return 'ref1'" );
-
+assert.equal( silph( merchant_array, "2.logo.reference" ), "ref1", "should be equal to 'ref1'" );
 
 console.log( "ok" );
