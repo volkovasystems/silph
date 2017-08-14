@@ -3,7 +3,6 @@ babel-runtime \
 loosen \
 optall \
 plough \
-protype \
 shft \
 truly \
 u200b \
@@ -20,7 +19,6 @@ bower install \
 loosen \
 optall \
 plough \
-protype \
 shft \
 truly \
 u200b \

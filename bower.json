@@ -1,39 +1,30 @@
 {
-  "name": "silph",
-  "version": "0.18.0",
-  "description": "Look through shallow objects.",
-  "main": "silph.deploy.js",
-  "support": "silph.support.js",
-  "authors": [
-    "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon <vinsevinalon@gmail.com>"
-  ],
-  "license": "MIT",
-  "keywords": [
-    "look",
-    "through",
-    "shallow",
-    "objects",
-    "loosen",
-    "fluctuate",
-    "silph"
-  ],
-  "homepage": "https://github.com/volkovasystems/silph",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "loosen": "^0.26.0",
-    "optall": "^0.26.0",
-    "plough": "^0.26.0",
-    "protype": "^0.22.0",
-    "shft": "^0.2.0",
-    "truly": "^0.19.0",
-    "u200b": "^0.33.0"
-  }
+	"name": "silph",
+	"version": "0.19.0",
+	"description": "Look through shallow objects.",
+	"main": "silph.deploy.js",
+	"support": "silph.support.js",
+	"authors": [
+		"Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+		"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+		"Vinse Vinalon <vinsevinalon@gmail.com>"
+	],
+	"license": "MIT",
+	"keywords": [
+		"look",
+		"through",
+		"shallow",
+		"objects",
+		"loosen",
+		"fluctuate",
+		"silph"
+	],
+	"homepage": "https://github.com/volkovasystems/silph",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
 }
