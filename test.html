@@ -1,56 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>silph unit test</title>
+		<meta charset="utf-8">
 
-		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+		<title>test:silph</title>
 
-		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
-
-		<script type="application/javascript" src="./silph.deploy.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css"/>
 	</head>
 
 	<body>
-		<div id="qunit"></div>
+		<div id="mocha"></div>
 
-		<div id="qunit-fixture"></div>
+		<script type="application/javascript" src="https://unpkg.com/mocha/mocha.js"></script>
 
 		<script type="application/javascript">
-			QUnit.test( "silph unit test", function( assert ) {
+			mocha.setup( "bdd" );
+		</script>
 
-				let item_object = {
-					"item": {
-						"name": "burger-item",
-						"title": "Burger Item"
-					}
-				};
+		<script type="application/javascript" src="./test.deploy.js"></script>
 
-				let item_array = [
-					"ballpen-item",
-					"Ballpen Item"
-				];
-
-				let merchant_array = [
-					"biyaheroes-team",
-					"pure-gold",
-					{
-						"logo": {
-							"reference": "ref1",
-							"path": "path1"
-						}
-					}
-				];
-
-				assert.equal( silph( item_object, "item.title" ), "Burger Item", "should be equal to 'Burger Item'" );
-
-				assert.equal( silph( item_array, "0" ), "ballpen-item", "should be equal to 'ballpen-item'" );
-
-				assert.deepEqual( silph( merchant_array, "2.logo" ), { "reference": "ref1", "path": "path1" },
-					"should be equal to { 'reference': 'ref1', 'path': 'path1' }" );
-
-				assert.equal( silph( merchant_array, "2.logo.reference" ), "ref1", "should be equal to 'ref1'" );
-
-			} );
+		<script type="application/javascript">
+			mocha.run( );
 		</script>
 	</body>
 </html>
